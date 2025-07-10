@@ -1,0 +1,149 @@
+/* ========= Colour Palette ========= */
+:root {
+  --pink: #e91e63;
+  --blue: #2196f3;
+  --pink-dark: #d81b60;
+  --blue-dark: #1976d2;
+  --text-dark: #333;
+  --bg-light: #fafafa;
+}
+
+/* ========= Reset & Base ========= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ========= Navigation ========= */
+.navbar {
+  background: var(--blue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo { font-weight: bold; font-size: 1.25rem; }
+.hamburger { display: none; cursor: pointer; font-size: 1.5rem; }
+#toggle-menu { display: none; }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+.nav-links a:hover { background: var(--pink); }
+
+/* ======== Mobile Menu ======== */
+@media (max-width: 700px) {
+  .hamburger { display: block; }
+  .nav-links {
+    position: absolute;
+    top: 56px; /* nav height */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--blue);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  #toggle-menu:checked + .hamburger + .nav-links {
+    max-height: 300px;
+  }
+}
+
+/* ========= Header ========= */
+header {
+  background: var(--pink);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+header p { max-width: 600px; margin: 0 auto; }
+
+/* ========= Layout Wrapper ========= */
+.container { width: 90%; max-width: 1200px; margin: 2rem auto; }
+
+/* ========= Services Grid ========= */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+.service-card:hover { transform: translateY(-5px); }
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.service-card h3 {
+  background: var(--blue);
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+/* ========= Booking Form ========= */
+.form-section {
+  margin-top: 3rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form-section h2 { color: var(--blue); margin-bottom: 1rem; text-align: center; }
+form { display: grid; gap: 1rem; }
+input, select, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+button {
+  background: var(--pink);
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+button:hover { background: var(--pink-dark); }
+
+/* ========= Footer ========= */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: var(--blue);
+  color: #fff;
+}
+
+/* ========= Responsive Tweaks ========= */
+@media (max-width: 500px) {
+  header h1 { font-size: 2rem; }
+  .service-card img { height: 150px; }
+}
