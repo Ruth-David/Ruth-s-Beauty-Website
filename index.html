@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruth's Beauty Parlour</title>
+
+  <!-- Link to the external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <h1>Ruth's Beauty Parlour</h1>
+    <p>
+      Welcome to Ruth's Beauty Parlour — your one‑stop destination in Nairobi for
+      exquisite hair styling, flawless nails, beautifully locked dreads, and soothing
+      relaxation &amp; massage services. We blend passion with professionalism to leave
+      you looking and feeling your absolute best.
+    </p>
+  </header>
+
+  
+<body>
+  <!-- ===== Navigation Bar ===== -->
+  <nav class="navbar">
+    <div class="logo">Ruth's Beauty</div>
+    <input type="checkbox" id="toggle-menu" />
+    <label class="hamburger" for="toggle-menu">&#9776;</label>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#booking">Book</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="container">
+    <!-- ===== Services Grid ===== -->
+    <section class="services">
+
+      <!-- Hair Plating & Styling -->
+      <article class="service-card">
+        <img src="C:/Users/dell/OneDrive/Desktop/Beauty images/Hair styling.jpg" alt="Hair plating & styling 1">
+        <img src="C:/Users/dell/OneDrive/Desktop/Beauty images/Hair plating.jpg" alt="Hair plating & styling 2">
+        <h3>Hair Plating &amp; Styling</h3>
+      </article>
+
+      <!-- Nails Polishing -->
+      <article class="service-card">
+        <img src="C:/Users/dell/OneDrive/Desktop/Beauty images/Nail polishing.webp" alt="Nails polishing 1">
+        <img src="C:/Users/dell/OneDrive/Desktop/Beauty images/Nail Polishing.jpg" alt="Nails polishing 2">
+        <h3>Nails Polishing</h3>
+      </article>
+
+      <!-- Dreads Locking -->
+      <article class="service-card">
+        <img src="C:/Users/dell/OneDrive/Desktop/Beauty images/Dread locks.jpg" alt="Dreads locking 1">
+        <img src="C:/Users/dell/OneDrive/Desktop/Beauty images/Dread lock2.jpg" alt="Dreads locking 2">
+        <h3>Dreads Locking</h3>
+      </article>
+
+      <!-- Relaxation & Massage -->
+      <article class="service-card">
+        <img src="C:/Users/dell/OneDrive/Desktop/Beauty images/Massage.jpg" alt="Relaxation & massage 1">
+        <img src="C:/Users/dell/OneDrive/Desktop/Beauty images/Salon front.jpg" alt="Relaxation & massage 2">
+        <h3>Relaxation &amp; Massage</h3>
+      </article>
+
+    </section>
+
+    <!-- ===== Booking Form ===== -->
+    <section class="form-section" id="booking">
+      <h2>Book Your Appointment</h2>
+
+      <!-- Change action to your backend script or email service later -->
+      <form action="#" method="post">
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email Address">
+        <select name="service" required>
+          <option value="" disabled selected>Select Service</option>
+          <option value="Hair Plating & Styling">Hair Plating &amp; Styling</option>
+          <option value="Nails Polishing">Nails Polishing</option>
+          <option value="Dreads Locking">Dreads Locking</option>
+          <option value="Relaxation & Massage">Relaxation &amp; Massage</option>
+        </select>
+        <textarea name="message" rows="4" placeholder="Additional Details (optional)"></textarea>
+        <button type="submit">Submit Booking</button>
+      </form>
+    </section>
+  </main>
+
+   <!-- ===== Contact / Footer ===== -->
+  <footer id="contact">
+    © <span id="year"></span> Ruth's Beauty Parlour. All rights reserved.
+  </footer>
+
+  <!-- Include your JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
+
