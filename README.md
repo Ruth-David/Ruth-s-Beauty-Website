@@ -5,7 +5,7 @@ Responsive single‑page website for Ruth's  Beauty Salon, built with HTML, CSS�
 - Navigation bar with smooth scrolling  
 - Services section showcasing hairdressing packages  
 - Gallery with lightbox effect  
-- Contact form linked to WhatsApp (+254 798 850 332)  
+- Contact form linked to WhatsApp (+254 710439814)  
 
 ## Getting Started
 1. Clone the repo  
